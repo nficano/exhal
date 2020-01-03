@@ -1,6 +1,4 @@
-from math import exp
-from math import pi
-from math import cos
+import math
 import sys
 import time
 
@@ -27,11 +25,11 @@ def pulse(color, steps, pulse_delay):
         time.sleep(pulse_delay)
 
 
-def get_brightness(max_brightness, total, indx):
-    x = 6.28  # 2 * pi
-    y = 0.36  # 1 / e    
-    z = 2.35  # e - 1 / e
-    return float((exp(-cos(x * (indx / total))) - y) * (max_brightness / z))
+def get_brightness(max_brightness, total_steps, step):
+    return float(
+        (math.exp(-math.cos(2 * math.pi * (step / total_steps))) - 1 / math.e)
+        * (max_brightness / (math.e - 1 / math.e))
+    )
 
 
 def set_colors(rgb):
