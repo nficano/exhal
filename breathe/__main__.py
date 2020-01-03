@@ -1,9 +1,8 @@
 import math
-import time
 import sys
-import colorutils
 import time
 
+import colorutils
 from blinkstick import blinkstick
 
 PULSE_DELAY = 0.02
@@ -43,7 +42,7 @@ def main():
     try:
         while True:
             pulse(COLOR, STEPS, PULSE_DELAY)
-            time.sleep(OFF_DELAY - (time.time() % OFF_DELAY)) 
+            time.sleep(OFF_DELAY - (time.time() % OFF_DELAY))
     except KeyboardInterrupt:
         sys.exit()
 

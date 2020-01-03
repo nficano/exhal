@@ -1,0 +1,42 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "5380504da9a709bbba3bc2d904e6e1548b297cbb68a0f8fb0b000985c8c941f0"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.7"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "blinkstick": {
+            "hashes": [
+                "sha256:3edf4b83a3fa1a7bd953b452b76542d54285ff6f1145b6e19f9b5438120fa408"
+            ],
+            "index": "pypi",
+            "version": "==1.1.8"
+        },
+        "colorutils": {
+            "hashes": [
+                "sha256:c08d08411b11fa2a5e38f729a23f6ab84a6c92971d76443f575c66a4c308aba6"
+            ],
+            "index": "pypi",
+            "version": "==0.2.1"
+        },
+        "pyusb": {
+            "hashes": [
+                "sha256:6fa787840baa8c6a041e370bf381127aae5fb44c820ba655f966b7da4de6279f",
+                "sha256:e9a7c7fd10f72cfba2e1b53405a4d2d06ba58a247d009ecc31568464886b446d"
+            ],
+            "version": "==1.0.0b1"
+        }
+    },
+    "develop": {}
+}
