@@ -4,10 +4,20 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+flake8 = "*"
+jupyter = "*"
+numpy = "*"
+matplotlib = "*"
+scipy = "*"
+ipython = "*"
 
 [packages]
 blinkstick = "*"
 colorutils = "*"
+pyyaml = "*"
+python-box = "*"
+psutil = "*"
+retry = "*"
 
 [requires]
 python_version = "3.7"
