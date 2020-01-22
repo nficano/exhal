@@ -1,10 +1,9 @@
-color: '#ffc670'
+color: '#ffc58f'
 
-hertz: 300
-period: 3
-amplitude:
-  hi: 1
-  lo: .08
+frequency: 1000
+steps: 5
+max_amplitude: 1
+min_amplitude: .08
 
 logging:
   version: 1
