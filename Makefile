@@ -23,21 +23,21 @@ clean: clean-build clean-pyc
 
 bumpversion-patch:
 	bumpversion patch
-	git commit -am 'Bump version (patch)'
+	pre-commit run --all-files
 	git commit -am 'Bump version (patch)'
 	git push
 	git push --tags
 
 bumpversion-minor:
 	bumpversion patch
-	git commit -am 'Bump version (minor)'
+	pre-commit run --all-files
 	git commit -am 'Bump version (minor)'
 	git push
 	git push --tags
 
 bumpversion-major:
 	bumpversion patch
-	git commit -am 'Bump version (major)'
+	pre-commit run --all-files
 	git commit -am 'Bump version (major)'
 	git push
 	git push --tags
