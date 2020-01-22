@@ -10,13 +10,15 @@ numpy = "*"
 matplotlib = "*"
 scipy = "*"
 ipython = "*"
+twine = "*"
+pipenv-to-requirements = "*"
+bumpversion = "*"
 
 [packages]
 blinkstick = "*"
 colorutils = "*"
 pyyaml = "*"
 python-box = "*"
-psutil = "*"
 retry = "*"
 
 [requires]

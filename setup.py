@@ -13,6 +13,9 @@ README = os.path.join(THIS_DIR, "README.md")
 with codecs.open(README, encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
+with open("requirements.txt") as f:
+    requirements = f.read().splitlines()
+
 
 class UploadCommand(Command):
     """Support setup.py publish."""
@@ -57,6 +60,7 @@ setup(
     license="MIT",
     package_data={"": ["LICENSE"]},
     scripts=["scripts/exhal"],
+    install_requires=requirements,
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
