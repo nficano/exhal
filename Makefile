@@ -1,24 +1,24 @@
 dev:
-    pipenv install --dev
+	pipenv install --dev
 
-dists: requirements sdist bdist wheels clean
+dists: requirements sdist bdist wheels upload clean
 
 requirements:
-    # For a library, use:
-    pipenv_to_requirements
-    # For an application, use:
-    # pipenv run pipenv_to_requirements -f
+	pipenv_to_requirements
 
 sdist: requirements
-    python setup.py sdist
+	python setup.py sdist
 
 bdist: requirements
-    python setup.py bdist
+	python setup.py bdist
 
 wheels: requirements
-    python setup.py bdist_wheel
+	python setup.py bdist_wheel
 
 clean: clean-build clean-pyc
+
+upload:
+	python setup.py sdist bdist wheels upload
 
 clean-build:
 	rm -fr build/

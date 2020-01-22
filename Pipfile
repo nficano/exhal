@@ -13,6 +13,7 @@ ipython = "*"
 twine = "*"
 pipenv-to-requirements = "*"
 bumpversion = "*"
+wheel = "*"
 
 [packages]
 blinkstick = "*"

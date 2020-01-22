@@ -61,6 +61,7 @@ setup(
     package_data={"": ["LICENSE"]},
     scripts=["scripts/exhal"],
     install_requires=requirements,
+    setup_requires=["wheel"],
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
