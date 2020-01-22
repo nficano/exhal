@@ -19,3 +19,4 @@ numpy
 pipenv-to-requirements
 scipy
 twine
+wheel

@@ -18,7 +18,7 @@ wheels: requirements
 clean: clean-build clean-pyc
 
 upload:
-	python setup.py sdist bdist wheels upload
+	python setup.py sdist bdist bdist_wheel upload
 
 clean-build:
 	rm -fr build/
