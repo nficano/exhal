@@ -1,7 +1,11 @@
 dev:
 	pipenv install --dev
 
-dists: requirements sdist bdist wheels upload clean
+deploy-patch: requirements bumpversion-patch sdist bdist wheels upload clean
+
+deploy-minor: requirements bumpversion-minor sdist bdist wheels upload clean
+
+deploy-major: requirements bumpversion-major sdist bdist wheels upload clean
 
 requirements:
 	pipenv_to_requirements
@@ -16,6 +20,27 @@ wheels: requirements
 	python setup.py bdist_wheel
 
 clean: clean-build clean-pyc
+
+bumpversion-patch:
+	bumpversion patch
+	git commit -am 'Bump version (patch)'
+	git commit -am 'Bump version (patch)'
+	git push
+	git push --tags
+
+bumpversion-minor:
+	bumpversion patch
+	git commit -am 'Bump version (minor)'
+	git commit -am 'Bump version (minor)'
+	git push
+	git push --tags
+
+bumpversion-major:
+	bumpversion patch
+	git commit -am 'Bump version (major)'
+	git commit -am 'Bump version (major)'
+	git push
+	git push --tags
 
 upload:
 	python setup.py sdist bdist bdist_wheel upload
