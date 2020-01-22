@@ -4,6 +4,7 @@ frequency: 1000
 steps: 5
 max_amplitude: 1
 min_amplitude: .08
+delay: 0
 
 logging:
   version: 1

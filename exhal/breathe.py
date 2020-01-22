@@ -26,6 +26,7 @@ class Breathe:
     @retry((BlinkStickException, USBError), tries=3, delay=2)
     def run_forever(self):
         seq = self.get_oscillation_cycle()
+        time.sleep(self.cfg.delay)
         self.breathe(seq)
 
     def breathe(self, seq):
@@ -33,7 +34,7 @@ class Breathe:
             tick = self.cfg.steps / (1.0 * len(seq))
             for red, blu, grn in cycle(seq):
                 self.led.set_color(red=red, green=grn, blue=blu)
-                time.sleep(tick)
+                time.sleep(tick - (time.time() % tick))
 
     def get_oscillation_cycle(self):
         hue, sat, val = colorutils.hex_to_hsv(self.cfg.color)

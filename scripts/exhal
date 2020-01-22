@@ -1,5 +1,20 @@
 #!/usr/bin/env python
+import click
+
 from exhal import Breathe
 
-breathe = Breathe()
-breathe.run_forever()
+
+@click.group()
+def cli():
+    pass
+
+
+@click.command(help="Start heartbeat.")
+@click.argument("--settings", default=None, type=click.Path(exists=True))
+def run(settings):
+    breathe = Breathe(overrides=settings)
+    breathe.run_forever()
+
+
+if __name__ == "__main__":
+    cli.add_command(run)

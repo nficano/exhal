@@ -21,6 +21,7 @@ colorutils = "*"
 pyyaml = "*"
 python-box = "*"
 retry = "*"
+click = "*"
 
 [requires]
 python_version = "3.7"
