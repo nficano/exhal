@@ -52,7 +52,7 @@ class UploadCommand(Command):
 
 setup(
     name="exhal",
-    version="1.0.11",
+    version="1.0.12",
     author="Nick Ficano",
     author_email="nficano@gmail.com",
     packages=["exhal"],
