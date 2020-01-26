@@ -23,24 +23,19 @@ clean: clean-build clean-pyc
 
 bumpversion-patch:
 	bumpversion patch
-	pre-commit run --all-files || true
-	git commit -am 'Bump version (patch)'
 	git push
 	git push --tags
 
 bumpversion-minor:
-	bumpversion patch
-	pre-commit run --all-files || true
-	git commit -am 'Bump version (minor)'
+	bumpversion minor
 	git push
 	git push --tags
 
 bumpversion-major:
-	bumpversion patch
-	pre-commit run --all-files || true
-	git commit -am 'Bump version (major)'
+	bumpversion major
 	git push
 	git push --tags
+
 
 upload:
 	python setup.py sdist bdist bdist_wheel upload
