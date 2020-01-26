@@ -13,7 +13,7 @@ def cli():
 @click.argument("settings", default=None, type=click.Path(exists=True))
 def run(settings):
     breathe = Breathe(overrides=settings)
-    breathe.run_forever()
+    breathe.start()
 
 
 if __name__ == "__main__":
